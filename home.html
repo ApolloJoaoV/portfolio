@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2B2B35" />
+    <title>João Apollo — Desenvolvedor PHP/Laravel</title>
+    <meta
+      name="description"
+      content="Portfólio de João Apollo, desenvolvedor PHP/Laravel. Experiência em e-commerce, sistemas de gestão, UX e performance. Projetos completos e clientes satisfeitos."
+    />
+    <link rel="canonical" href="https://seu-dominio.com/home.html" />
+    <meta
+      name="robots"
+      content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+    />
+    <link rel="shortcut icon" href="img/thumbnail.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:title"
+      content="João Apollo — Desenvolvedor PHP/Laravel"
+    />
+    <meta
+      property="og:description"
+      content="Portfólio de João Apollo, desenvolvedor PHP/Laravel. Experiência em e-commerce, sistemas de gestão e UX."
+    />
+    <meta property="og:url" content="https://seu-dominio.com/home.html" />
+    <meta
+      property="og:image"
+      content="https://seu-dominio.com/img/profile.jpeg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="João Apollo — Desenvolvedor PHP/Laravel"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfólio de João Apollo, desenvolvedor PHP/Laravel."
+    />
+    <meta
+      name="twitter:image"
+      content="https://seu-dominio.com/img/profile.jpeg"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "João Apollo",
+        "jobTitle": "Desenvolvedor PHP/Laravel",
+        "image": "https://seu-dominio.com/img/profile.jpeg",
+        "url": "https://seu-dominio.com/home.html",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Novo Hamburgo",
+          "addressRegion": "RS",
+          "addressCountry": "BR"
+        },
+        "knowsLanguage": ["pt-BR", "en", "es"]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="art-app">
+      <div class="art-mobile-top-bar" aria-hidden="true"></div>
+
+      <div class="art-app-wrapper">
+        <div class="art-app-container">
+          <aside class="art-info-bar" aria-label="Barra lateral de informações">
+            <div class="art-info-bar-frame">
+              <div class="art-info-bar-header">
+                <button
+                  class="art-info-bar-btn"
+                  aria-label="Abrir/fechar barra lateral"
+                >
+                  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <header class="art-header">
+                <div class="art-avatar">
+                  <a
+                    data-fancybox="avatar"
+                    href="img/profile.jpeg"
+                    class="art-avatar-curtain"
+                    aria-label="Ver foto em tamanho maior"
+                  >
+                    <img src="img/profile.jpeg" alt="Foto de João Apollo" />
+                    <i class="fas fa-expand" aria-hidden="true"></i>
+                  </a>
+                  <div class="art-lamp-light">
+                    <div
+                      class="art-available-lamp"
+                      aria-label="Disponível"
+                    ></div>
+                  </div>
+                </div>
+                <p class="art-name mb-10">
+                  <a href="/home.html">João Apollo</a>
+                </p>
+                <p class="art-sm-text">
+                  Back-end Developer<br />Desenvolvedor Web
+                </p>
+              </header>
+
+              <div
+                id="scrollbar"
+                class="art-scroll-frame"
+                role="region"
+                aria-label="Informações do perfil"
+              >
+                <div class="art-table p-15-15">
+                  <ul>
+                    <li>
+                      <h6>Cidade:</h6>
+                      <span>Novo Hamburgo</span>
+                    </li>
+                    <li>
+                      <h6>Idade:</h6>
+                      <span>25</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="art-ls-divider"></div>
+
+                <section class="art-lang-skills p-30-15" aria-label="Idiomas">
+                  <div class="art-lang-skills-item">
+                    <div id="circleprog1" class="art-cirkle-progress"></div>
+                    <h6>Português</h6>
+                  </div>
+                  <div class="art-lang-skills-item">
+                    <div id="circleprog2" class="art-cirkle-progress"></div>
+                    <h6>English</h6>
+                  </div>
+                  <div class="art-lang-skills-item">
+                    <div id="circleprog3" class="art-cirkle-progress"></div>
+                    <h6>Spanish</h6>
+                  </div>
+                </section>
+
+                <div class="art-ls-divider"></div>
+
+                <section
+                  class="art-hard-skills p-30-15"
+                  aria-label="Competências técnicas"
+                >
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading"><h6>PHP</h6></div>
+                    <div class="art-line-progress">
+                      <div id="lineprog1"></div>
+                    </div>
+                  </div>
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading"><h6>MySQL</h6></div>
+                    <div class="art-line-progress">
+                      <div id="lineprog2"></div>
+                    </div>
+                  </div>
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading"><h6>JavaScript</h6></div>
+                    <div class="art-line-progress">
+                      <div id="lineprog3"></div>
+                    </div>
+                  </div>
+                  <div class="art-hard-skills-item">
+                    <div class="art-skill-heading"><h6>Node.js</h6></div>
+                    <div class="art-line-progress">
+                      <div id="lineprog4"></div>
+                    </div>
+                  </div>
+                </section>
+
+                <div class="art-ls-divider"></div>
+
+                <ul
+                  class="art-knowledge-list p-15-0"
+                  aria-label="Conhecimentos"
+                >
+                  <li>Laravel</li>
+                  <li>Git</li>
+                  <li>Livewire</li>
+                  <li>Bootstrap, Materialize</li>
+                </ul>
+
+                <div class="art-ls-divider"></div>
+
+                <div class="art-links-frame p-15-15">
+                  <a
+                    href="files/curriculo.pdf" target="_blank"
+                    class="art-link"
+                    download
+                    aria-label="Baixar currículo"
+                    >Download CV
+                    <i class="fas fa-download" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div class="art-ls-social" aria-label="Redes sociais">
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="#" aria-label="GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="Twitter/X"
+                  ><i class="fab fa-x-twitter"></i
+                ></a>
+                <a href="#" aria-label="YouTube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </aside>
+
+          <div class="art-content">
+            <div class="art-curtain" aria-hidden="true"></div>
+
+            <div class="art-top-bg" style="background-image: url(img/bg.jpg)">
+              <div class="art-top-bg-overlay" aria-hidden="true"></div>
+            </div>
+
+            <main id="swup" class="transition-fade" role="main">
+              <div
+                id="scrollbar2"
+                class="art-scroll-frame"
+                role="region"
+                aria-label="Conteúdo principal"
+              >
+                <section class="container-fluid">
+                  <div class="row p-60-0 p-lg-30-0 p-md-15-0">
+                    <div class="col-lg-12">
+                      <div
+                        class="art-a art-banner"
+                        style="background-image: url(img/bg.jpg)"
+                      >
+                        <div class="art-banner-back" aria-hidden="true"></div>
+                        <div class="art-banner-dec" aria-hidden="true"></div>
+                        <div class="art-banner-overlay">
+                          <div class="art-banner-title">
+                            <h1 class="mb-15">Bem-vindo ao meu portfólio</h1>
+                            <div class="art-lg-text art-code mb-25">
+                              &lt;<i>code</i>&gt; Eu construo
+                              <span
+                                class="txt-rotate"
+                                data-period="2000"
+                                data-rotate='["E-commerces","Sistemas de Gestão","Landing Pages","Aplicativos Mobile"]'
+                              ></span>
+                              &lt;/<i>code</i>&gt;
+                            </div>
+                          </div>
+                          <img
+                            src="img/no-bg.png"
+                            class="art-banner-photo"
+                            alt="João Apollo em destaque"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="container-fluid" aria-label="Métricas">
+                  <div class="row p-30-0">
+                    <div class="col-md-4 col-6">
+                      <div class="art-counter-frame">
+                        <div class="art-counter-box">
+                          <span class="art-counter">5</span
+                          ><span class="art-counter-plus">+</span>
+                        </div>
+                        <h6>Anos de experiência</h6>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <div class="art-counter-frame">
+                        <div class="art-counter-box">
+                          <span class="art-counter">70</span>
+                        </div>
+                        <h6>Projetos completos</h6>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <div class="art-counter-frame">
+                        <div class="art-counter-box">
+                          <span class="art-counter">38</span
+                          ><span class="art-counter-plus">+</span>
+                        </div>
+                        <h6>Clientes satisfeitos</h6>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="container-fluid" aria-label="Experiências">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="art-section-title">
+                        <div class="art-title-frame">
+                          <h2>Minhas Experiências</h2>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                      <article class="art-a art-service-icon-box">
+                        <div class="art-service-ib-content">
+                          <h3 class="mb-15">
+                            Head Developer — TGR Studio Digital
+                          </h3>
+                          <p class="mb-15">
+                            Desenvolvimento em PHP/Laravel de sistemas de
+                            gestão, e-commerce e sites. Reuniões de requisitos,
+                            definição de arquitetura, foco em performance e
+                            segurança, gestão de equipe e prazos.
+                          </p>
+                          <div class="art-buttons-frame">
+                            <a
+                              href="https://www.linkedin.com/in/jo%C3%A3o-apollo"
+                              class="art-link art-color-link art-w-chevron" target="_blank"
+                              >Saiba mais</a
+                            >
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                      <article class="art-a art-service-icon-box">
+                        <div class="art-service-ib-content">
+                          <h3 class="mb-15">Desenvolvedor Pleno — USYS</h3>
+                          <p class="mb-15">
+                            Plataforma de fiança locatícia adquirida pelo
+                            QuintoAndar. Solução robusta e segura para processos
+                            de locação com ganho de eficiência.
+                          </p>
+                          <div class="art-buttons-frame">
+                            <a
+                              href="/https://www.linkedin.com/in/jo%C3%A3o-apollo"
+                              class="art-link art-color-link art-w-chevron" target="_blank"
+                              >Saiba mais</a
+                            >
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                      <article class="art-a art-service-icon-box">
+                        <div class="art-service-ib-content">
+                          <h3 class="mb-15">Full Stack — RSA Soluções em TI</h3>
+                          <p class="mb-15">
+                            Dev PHP com CodeIgniter em sistemas personalizados.
+                            Entregas com foco em performance, segurança e
+                            requisitos do cliente.
+                          </p>
+                          <div class="art-buttons-frame">
+                            <a
+                              href="https://www.linkedin.com/in/jo%C3%A3o-apollo"
+                              class="art-link art-color-link art-w-chevron" target="_blank"
+                              >Saiba mais</a 
+                            >
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                      <article class="art-a art-service-icon-box">
+                        <div class="art-service-ib-content">
+                          <h3 class="mb-15">Full Stack — Krafti Tecnologia</h3>
+                          <p class="mb-15">
+                            Manutenção e otimização de marketplace B2B,
+                            melhorias estratégicas para eficiência operacional e
+                            UX.
+                          </p>
+                          <div class="art-buttons-frame">
+                            <a
+                              href="https://www.linkedin.com/in/jo%C3%A3o-apollo"
+                              class="art-link art-color-link art-w-chevron" target="_blank"
+                              >Saiba mais</a
+                            >
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- <section class="container-fluid" aria-label="Recomendações">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="art-section-title">
+                        <div class="art-title-frame">
+                          <h2>Recomendações</h2>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div
+                        class="swiper-container art-testimonial-slider"
+                        style="overflow: visible"
+                      >
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <blockquote
+                              class="art-a art-testimonial"
+                              itemscope
+                              itemtype="https://schema.org/Review"
+                            >
+                              <div class="testimonial-body">
+                                <img
+                                  class="art-testimonial-face"
+                                  src="img/testimonials/face-1.jpg"
+                                  alt="Foto de Paul Trueman"
+                                />
+                                <h3 itemprop="author">Paul Trueman</h3>
+                                <p class="art-el-suptitle mb-15">
+                                  Template author
+                                </p>
+                                <p class="mb-15" itemprop="reviewBody">
+                                  Working with Artur has been a pleasure... This
+                                  is easily a 5 star freelancer.
+                                </p>
+                              </div>
+                              <div class="art-testimonial-footer">
+                                <div class="art-left-side">
+                                  <ul
+                                    class="art-star-rate"
+                                    aria-label="Avaliação: 5 de 5"
+                                  >
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                  </ul>
+                                </div>
+                                <div class="art-right-side"></div>
+                              </div>
+                            </blockquote>
+                          </div>
+
+                          <div class="swiper-slide">
+                            <blockquote class="art-a art-testimonial">
+                              <div class="testimonial-body">
+                                <img
+                                  class="art-testimonial-face"
+                                  src="img/testimonials/face-2.jpg"
+                                  alt="Foto de Paul Trueman"
+                                />
+                                <h3>Paul Trueman</h3>
+                                <p class="art-el-suptitle mb-15">
+                                  Template author
+                                </p>
+                                <p class="mb-15">
+                                  Working with Artur has been a pleasure...
+                                </p>
+                              </div>
+                              <div class="art-testimonial-footer">
+                                <div class="art-left-side">
+                                  <ul
+                                    class="art-star-rate"
+                                    aria-label="Avaliação: 4 de 5"
+                                  >
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li class="art-empty-item">
+                                      <i class="fas fa-star"></i>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="art-right-side"></div>
+                              </div>
+                            </blockquote>
+                          </div>
+
+                          <div class="swiper-slide">
+                            <blockquote class="art-a art-testimonial">
+                              <div class="testimonial-body">
+                                <img
+                                  class="art-testimonial-face"
+                                  src="img/testimonials/face-3.jpg"
+                                  alt="Foto de Paul Trueman"
+                                />
+                                <h3>Paul Trueman</h3>
+                                <p class="art-el-suptitle mb-15">
+                                  Template author
+                                </p>
+                                <p class="mb-15">
+                                  Working with Artur has been a pleasure...
+                                </p>
+                              </div>
+                              <div class="art-testimonial-footer">
+                                <div class="art-left-side">
+                                  <ul
+                                    class="art-star-rate"
+                                    aria-label="Avaliação: 5 de 5"
+                                  >
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                  </ul>
+                                </div>
+                                <div class="art-right-side"></div>
+                              </div>
+                            </blockquote>
+                          </div>
+
+                          <div class="swiper-slide">
+                            <blockquote class="art-a art-testimonial">
+                              <div class="testimonial-body">
+                                <img
+                                  class="art-testimonial-face"
+                                  src="img/testimonials/face-4.jpg"
+                                  alt="Foto de Paul Trueman"
+                                />
+                                <h3>Paul Trueman</h3>
+                                <p class="art-el-suptitle mb-15">
+                                  Template author
+                                </p>
+                                <p class="mb-15">
+                                  Working with Artur has been a pleasure...
+                                </p>
+                              </div>
+                              <div class="art-testimonial-footer">
+                                <div class="art-left-side">
+                                  <ul
+                                    class="art-star-rate"
+                                    aria-label="Avaliação: 5 de 5"
+                                  >
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                  </ul>
+                                </div>
+                                <div class="art-right-side"></div>
+                              </div>
+                            </blockquote>
+                          </div>
+                        </div>
+
+                        <div class="art-slider-navigation">
+                          <div class="art-sn-left">
+                            <div
+                              class="swiper-pagination"
+                              aria-label="Paginação"
+                            ></div>
+                          </div>
+                          <div class="art-sn-right">
+                            <div class="art-slider-nav-frame">
+                              <button
+                                class="art-slider-nav art-testi-swiper-prev"
+                                aria-label="Anterior"
+                              >
+                                <i class="fas fa-chevron-left"></i>
+                              </button>
+                              <button
+                                class="art-slider-nav art-testi-swiper-next"
+                                aria-label="Próximo"
+                              >
+                                <i class="fas fa-chevron-right"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section> -->
+
+                <section class="container-fluid" aria-label="Contato">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="art-section-title">
+                        <div class="art-title-frame">
+                          <h2>Informações de contato</h2>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="art-a art-card">
+                        <div class="art-table p-15-15">
+                          <ul>
+                            <li>
+                              <h6>Email:</h6>
+                              <span>apollojoaov@gmail.com</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="art-a art-card">
+                        <div class="art-table p-15-15">
+                          <ul>
+                            <li>
+                              <h6>Celular:</h6>
+                              <span>+55 (51) 99588-1825</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="container-fluid">
+                  <footer>
+                    <p>© 2025 João Apollo</p>
+                  </footer>
+                </section>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-preloader" aria-hidden="true">
+        <div class="art-preloader-content">
+          <h4>João Apollo</h4>
+          <div id="preloader" class="art-preloader-load"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/plugins/jquery.min.js"></script>
+    <script src="js/plugins/anime.min.js"></script>
+    <script src="js/plugins/swiper.min.js"></script>
+    <script src="js/plugins/progressbar.min.js"></script>
+    <script src="js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="js/plugins/overscroll.min.js"></script>
+    <script src="js/plugins/typing.min.js"></script>
+    <script src="js/plugins/isotope.min.js"></script>
+    <script src="js/plugins/fancybox.min.js"></script>
+    <!-- <script src="js/plugins/swup.min.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
