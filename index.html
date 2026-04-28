@@ -1,659 +1,1864 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#2B2B35" />
-    <title>João Apollo — Desenvolvedor PHP/Laravel</title>
-    <meta
-      name="description"
-      content="Portfólio de João Apollo, desenvolvedor PHP/Laravel. Experiência em e-commerce, sistemas de gestão, UX e performance. Projetos completos e clientes satisfeitos."
-    />
-    <link rel="canonical" href="https://seu-dominio.com/home.html" />
-    <meta
-      name="robots"
-      content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
-    />
-    <link rel="shortcut icon" href="img/thumbnail.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/plugins/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/plugins/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/plugins/swiper.min.css" />
-    <link rel="stylesheet" href="css/plugins/fancybox.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>João Vitor Apollo — Backend Developer</title>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta
-      property="og:title"
-      content="João Apollo — Desenvolvedor PHP/Laravel"
-    />
-    <meta
-      property="og:description"
-      content="Portfólio de João Apollo, desenvolvedor PHP/Laravel. Experiência em e-commerce, sistemas de gestão e UX."
-    />
-    <meta property="og:url" content="https://seu-dominio.com/home.html" />
-    <meta
-      property="og:image"
-      content="https://seu-dominio.com/img/profile.jpeg"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="João Apollo — Desenvolvedor PHP/Laravel"
-    />
-    <meta
-      name="twitter:description"
-      content="Portfólio de João Apollo, desenvolvedor PHP/Laravel."
-    />
-    <meta
-      name="twitter:image"
-      content="https://seu-dominio.com/img/profile.jpeg"
-    />
+  <!-- ═══════════════════════════════════════════════════════════
+       FONTES — Para trocar, substitua as URLs do Google Fonts
+       abaixo e atualize as variáveis --font-* no :root
+  ════════════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "João Apollo",
-        "jobTitle": "Desenvolvedor PHP/Laravel",
-        "image": "https://seu-dominio.com/img/profile.jpeg",
-        "url": "https://seu-dominio.com/home.html",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Novo Hamburgo",
-          "addressRegion": "RS",
-          "addressCountry": "BR"
-        },
-        "knowsLanguage": ["pt-BR", "en", "es"]
-      }
-    </script>
-  </head>
-  <body>
-    <div class="art-app">
-      <div class="art-mobile-top-bar" aria-hidden="true"></div>
+  <!-- ═══════════════════════════════════════════════════════════
+       ESTILOS GLOBAIS
+  ════════════════════════════════════════════════════════════ -->
+  <style>
+    /* ─────────────────────────────────────────
+       TOKENS DE DESIGN — edite aqui para mudar
+       toda a paleta e tipografia do site
+    ───────────────────────────────────────── */
+    :root {
+      /* Cores principais */
+      --c-bg:       #080a12;
+      --c-surface:  #0e1120;
+      --c-surface2: #141828;
+      --c-border:   rgba(255 255 255 / 0.07);
+      --c-border2:  rgba(255 255 255 / 0.12);
 
-      <div class="art-app-wrapper">
-        <div class="art-app-container">
-          <aside class="art-info-bar" aria-label="Barra lateral de informações">
-            <div class="art-info-bar-frame">
-              <div class="art-info-bar-header">
-                <button
-                  class="art-info-bar-btn"
-                  aria-label="Abrir/fechar barra lateral"
-                >
-                  <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
-                </button>
-              </div>
+      /* Accent — mude aqui para trocar a cor principal */
+      --c-accent:   #00d4c8;
+      --c-accent2:  #e8a030;
+      --c-green:    #22d48a;
 
-              <header class="art-header">
-                <div class="art-avatar">
-                  <a
-                    data-fancybox="avatar"
-                    href="img/profile.jpeg"
-                    class="art-avatar-curtain"
-                    aria-label="Ver foto em tamanho maior"
-                  >
-                    <img src="img/profile.jpeg" alt="Foto de João Apollo" />
-                    <i class="fas fa-expand" aria-hidden="true"></i>
-                  </a>
-                  <div class="art-lamp-light">
-                    <div
-                      class="art-available-lamp"
-                      aria-label="Disponível"
-                    ></div>
-                  </div>
-                </div>
-                <p class="art-name mb-10">
-                  <a href="/home.html">João Apollo</a>
-                </p>
-                <p class="art-sm-text">
-                  Back-end Developer<br />Desenvolvedor Web
-                </p>
-              </header>
+      /* Texto */
+      --c-text:     #edf0fa;
+      --c-text2:    #6e7a96;
+      --c-text3:    #3a4460;
 
-              <div
-                id="scrollbar"
-                class="art-scroll-frame"
-                role="region"
-                aria-label="Informações do perfil"
-              >
-                <div class="art-table p-15-15">
-                  <ul>
-                    <li>
-                      <h6>Cidade:</h6>
-                      <span>Novo Hamburgo</span>
-                    </li>
-                    <li>
-                      <h6>Idade:</h6>
-                      <span>25</span>
-                    </li>
-                  </ul>
-                </div>
+      /* Tipografia */
+      --font-head:  'Bricolage Grotesque', sans-serif;
+      --font-body:  'Outfit', sans-serif;
+      --font-mono:  'JetBrains Mono', monospace;
 
-                <div class="art-ls-divider"></div>
+      /* Layout */
+      --sidebar-w: 264px;
+      --section-px: 72px;
 
-                <section class="art-lang-skills p-30-15" aria-label="Idiomas">
-                  <div class="art-lang-skills-item">
-                    <div id="circleprog1" class="art-cirkle-progress"></div>
-                    <h6>Português</h6>
-                  </div>
-                  <div class="art-lang-skills-item">
-                    <div id="circleprog2" class="art-cirkle-progress"></div>
-                    <h6>English</h6>
-                  </div>
-                  <div class="art-lang-skills-item">
-                    <div id="circleprog3" class="art-cirkle-progress"></div>
-                    <h6>Spanish</h6>
-                  </div>
-                </section>
+      /* Transições */
+      --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
 
-                <div class="art-ls-divider"></div>
+    /* ─────────────────────────────────────────
+       RESET & BASE
+    ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-                <section
-                  class="art-hard-skills p-30-15"
-                  aria-label="Competências técnicas"
-                >
-                  <div class="art-hard-skills-item">
-                    <div class="art-skill-heading"><h6>PHP</h6></div>
-                    <div class="art-line-progress">
-                      <div id="lineprog1"></div>
-                    </div>
-                  </div>
-                  <div class="art-hard-skills-item">
-                    <div class="art-skill-heading"><h6>MySQL</h6></div>
-                    <div class="art-line-progress">
-                      <div id="lineprog2"></div>
-                    </div>
-                  </div>
-                  <div class="art-hard-skills-item">
-                    <div class="art-skill-heading"><h6>JavaScript</h6></div>
-                    <div class="art-line-progress">
-                      <div id="lineprog3"></div>
-                    </div>
-                  </div>
-                  <div class="art-hard-skills-item">
-                    <div class="art-skill-heading"><h6>Node.js</h6></div>
-                    <div class="art-line-progress">
-                      <div id="lineprog4"></div>
-                    </div>
-                  </div>
-                </section>
+    html { scroll-behavior: smooth; font-size: 16px; }
 
-                <div class="art-ls-divider"></div>
+    body {
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+      cursor: none; /* cursor customizado */
+    }
 
-                <ul
-                  class="art-knowledge-list p-15-0"
-                  aria-label="Conhecimentos"
-                >
-                  <li>Laravel</li>
-                  <li>Git</li>
-                  <li>Livewire</li>
-                  <li>Bootstrap, Materialize</li>
-                </ul>
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: none; border: none; background: none; }
 
-                <div class="art-ls-divider"></div>
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--c-border2); border-radius: 2px; }
 
-                <div class="art-links-frame p-15-15">
-                  <a
-                    href="files/curriculo.pdf" target="_blank"
-                    class="art-link"
-                    download
-                    aria-label="Baixar currículo"
-                    >Download CV
-                    <i class="fas fa-download" aria-hidden="true"></i
-                  ></a>
-                </div>
-              </div>
+    /* ─────────────────────────────────────────
+       CURSOR CUSTOMIZADO
+    ───────────────────────────────────────── */
+    #cursor {
+      position: fixed;
+      width: 10px; height: 10px;
+      background: var(--c-accent);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s var(--ease-out), height 0.2s var(--ease-out), opacity 0.2s;
+      mix-blend-mode: difference;
+    }
+    #cursor-ring {
+      position: fixed;
+      width: 36px; height: 36px;
+      border: 1px solid var(--c-accent);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      opacity: 0.4;
+      transition: width 0.35s var(--ease-out), height 0.35s var(--ease-out),
+                  opacity 0.2s, border-color 0.2s;
+    }
+    body.cursor-hover #cursor  { width: 6px; height: 6px; }
+    body.cursor-hover #cursor-ring { width: 56px; height: 56px; opacity: 0.2; }
 
-              <div class="art-ls-social" aria-label="Redes sociais">
-                <a href="#" aria-label="LinkedIn"
-                  ><i class="fab fa-linkedin"></i
-                ></a>
-                <a href="#" aria-label="GitHub"
-                  ><i class="fab fa-github"></i
-                ></a>
-                <a href="#" aria-label="Instagram"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a href="#" aria-label="Twitter/X"
-                  ><i class="fab fa-x-twitter"></i
-                ></a>
-                <a href="#" aria-label="YouTube"
-                  ><i class="fab fa-youtube"></i
-                ></a>
+    /* ─────────────────────────────────────────
+       PRELOADER
+    ───────────────────────────────────────── */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: var(--c-bg);
+      z-index: 9000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      transition: opacity 0.6s var(--ease-out), visibility 0.6s;
+    }
+    #preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .pre-name {
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--c-text);
+      letter-spacing: 0.04em;
+    }
+    .pre-name span { color: var(--c-accent); }
+    .pre-bar {
+      width: 180px; height: 2px;
+      background: var(--c-border2);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .pre-fill {
+      height: 100%;
+      background: var(--c-accent);
+      border-radius: 2px;
+      width: 0%;
+      animation: preLoad 1s var(--ease-out) forwards;
+    }
+    @keyframes preLoad {
+      to { width: 100%; }
+    }
+
+    /* ─────────────────────────────────────────
+       BACKGROUND ATMOSFÉRICO
+    ───────────────────────────────────────── */
+    .bg-orbs {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .bg-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+    .bg-orb-1 {
+      width: 600px; height: 600px;
+      top: -100px; right: -100px;
+      background: radial-gradient(circle, rgba(0,212,200,0.07) 0%, transparent 70%);
+      animation: orbFloat 12s ease-in-out infinite;
+    }
+    .bg-orb-2 {
+      width: 400px; height: 400px;
+      bottom: 10%; left: 10%;
+      background: radial-gradient(circle, rgba(232,160,48,0.05) 0%, transparent 70%);
+      animation: orbFloat 16s ease-in-out 3s infinite reverse;
+    }
+    @keyframes orbFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-30px) scale(1.05); }
+    }
+
+    /* ─────────────────────────────────────────
+       LAYOUT PRINCIPAL
+    ───────────────────────────────────────── */
+    #app {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ─────────────────────────────────────────
+       SIDEBAR
+    ───────────────────────────────────────── */
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      width: var(--sidebar-w);
+      background: var(--c-surface);
+      border-right: 1px solid var(--c-border);
+      display: flex;
+      flex-direction: column;
+      padding: 36px 24px 32px;
+      z-index: 200;
+      overflow: hidden;
+    }
+    /* Linha de luz no topo da sidebar */
+    .sidebar::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 24px; right: 24px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--c-accent), transparent);
+      opacity: 0.5;
+    }
+
+    /* Logo / marca */
+    .sidebar-logo {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--c-accent);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo-blink {
+      display: inline-block;
+      width: 7px; height: 14px;
+      background: var(--c-accent);
+      border-radius: 1px;
+      animation: blink 1.1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* Foto / avatar placeholder */
+    .sidebar-avatar {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: var(--c-surface2);
+      border: 1px solid var(--c-border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--c-accent);
+      margin-bottom: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+    .sidebar-avatar::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--c-accent) 0%, transparent 60%);
+      opacity: 0.08;
+    }
+
+    .sidebar-name {
+      font-family: var(--font-head);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--c-text);
+      margin-bottom: 3px;
+      letter-spacing: -0.01em;
+    }
+    .sidebar-role {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--c-text3);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* Toggle de idioma */
+    .lang-switch {
+      display: flex;
+      background: var(--c-surface2);
+      border: 1px solid var(--c-border);
+      border-radius: 10px;
+      padding: 3px;
+      margin-bottom: 22px;
+      gap: 3px;
+    }
+    .lang-btn {
+      flex: 1;
+      padding: 6px 0;
+      border-radius: 7px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--c-text3);
+      transition: all 0.25s var(--ease-out);
+      text-align: center;
+    }
+    .lang-btn:hover { color: var(--c-text2); }
+    .lang-btn.active {
+      background: var(--c-accent);
+      color: #000;
+      font-weight: 700;
+      box-shadow: 0 2px 12px rgba(0,212,200,0.25);
+    }
+
+    /* Navegação */
+    .nav { display: flex; flex-direction: column; gap: 1px; }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--c-text2);
+      border: 1px solid transparent;
+      transition: all 0.22s var(--ease-out);
+      position: relative;
+    }
+    .nav-link:hover { color: var(--c-text); background: var(--c-surface2); }
+    .nav-link.active {
+      color: var(--c-accent);
+      background: rgba(0,212,200,0.07);
+      border-color: rgba(0,212,200,0.15);
+    }
+    /* Indicador animado */
+    .nav-pip {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.35;
+      flex-shrink: 0;
+      transition: opacity 0.2s, transform 0.25s var(--ease-spring);
+    }
+    .nav-link.active .nav-pip { opacity: 1; transform: scale(1.5); }
+    /* Número da seção */
+    .nav-num {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--c-text3);
+      margin-left: auto;
+      transition: color 0.2s;
+    }
+    .nav-link.active .nav-num { color: rgba(0,212,200,0.5); }
+
+    /* Links sociais */
+    .sidebar-socials {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--c-border);
+      display: flex;
+      gap: 8px;
+    }
+    .social-btn {
+      width: 34px; height: 34px;
+      border-radius: 9px;
+      background: var(--c-surface2);
+      border: 1px solid var(--c-border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--c-text2);
+      transition: all 0.22s var(--ease-out);
+    }
+    .social-btn:hover {
+      color: var(--c-accent);
+      border-color: rgba(0,212,200,0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,212,200,0.12);
+    }
+    .social-btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+    /* ─────────────────────────────────────────
+       CONTEÚDO PRINCIPAL
+    ───────────────────────────────────────── */
+    .main {
+      margin-left: var(--sidebar-w);
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* ─────────────────────────────────────────
+       COMPONENTES COMUNS
+    ───────────────────────────────────────── */
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--c-accent);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-tag::before {
+      content: '';
+      width: 18px; height: 1px;
+      background: var(--c-accent);
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(28px, 2.8vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      color: var(--c-text);
+      margin-bottom: 44px;
+    }
+
+    /* Botões */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: all 0.22s var(--ease-out);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: white;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .btn:hover::after { opacity: 0.06; }
+    .btn-accent {
+      background: var(--c-accent);
+      color: #000;
+      font-weight: 700;
+      box-shadow: 0 0 0 0 rgba(0,212,200,0.4);
+    }
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0,212,200,0.35);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--c-text);
+      border: 1px solid var(--c-border2);
+    }
+    .btn-ghost:hover {
+      background: var(--c-surface2);
+      border-color: rgba(255,255,255,0.18);
+      transform: translateY(-2px);
+    }
+
+    /* Badge disponível */
+    .avail-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      background: rgba(34,212,138,0.07);
+      border: 1px solid rgba(34,212,138,0.2);
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--c-green);
+    }
+    .avail-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--c-green);
+      animation: pulseGreen 2s ease infinite;
+    }
+    @keyframes pulseGreen {
+      0%,100% { box-shadow: 0 0 0 0 rgba(34,212,138,0.4); }
+      50%      { box-shadow: 0 0 0 5px rgba(34,212,138,0); }
+    }
+
+    /* ─────────────────────────────────────────
+       ANIMAÇÕES DE SCROLL
+    ───────────────────────────────────────── */
+    .anim {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+    }
+    .anim.from-left  { transform: translateX(-24px); }
+    .anim.from-right { transform: translateX(24px); }
+    .anim.scale-in   { transform: scale(0.93); }
+    .anim.in {
+      opacity: 1;
+      transform: none;
+    }
+    .anim-d1 { transition-delay: 0.06s; }
+    .anim-d2 { transition-delay: 0.12s; }
+    .anim-d3 { transition-delay: 0.18s; }
+    .anim-d4 { transition-delay: 0.24s; }
+    .anim-d5 { transition-delay: 0.30s; }
+    .anim-d6 { transition-delay: 0.36s; }
+
+    /* ─────────────────────────────────────────
+       SEÇÃO HERO
+    ───────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      padding: 0 var(--section-px);
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--c-border);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Linhas de grade sutis */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--c-border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--c-border) 1px, transparent 1px);
+      background-size: 56px 56px;
+      opacity: 0.5;
+      animation: fadeIn 2s ease both;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 0.5; } }
+
+    .hero-inner { position: relative; z-index: 1; max-width: 720px; }
+
+    /* Tag animado */
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(0,212,200,0.07);
+      border: 1px solid rgba(0,212,200,0.18);
+      border-radius: 20px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--c-accent);
+      margin-bottom: 22px;
+      opacity: 0;
+      animation: heroFade 0.7s var(--ease-out) 0.2s forwards;
+    }
+    .hero-tag .pulse {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--c-accent);
+      animation: pulseGreen 2.5s ease infinite;
+    }
+
+    @keyframes heroFade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Nome com efeito gradiente animado */
+    .hero-name {
+      font-family: var(--font-head);
+      font-size: clamp(52px, 6.5vw, 88px);
+      font-weight: 800;
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      color: var(--c-text);
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: heroFade 0.8s var(--ease-out) 0.3s forwards;
+    }
+    .hero-name .grad {
+      background: linear-gradient(90deg,
+        var(--c-accent) 0%,
+        rgba(0,212,200,0.6) 40%,
+        var(--c-accent) 70%,
+        rgba(0,180,220,0.8) 100%
+      );
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradMove 6s linear infinite;
+    }
+    @keyframes gradMove {
+      from { background-position: 0% center; }
+      to   { background-position: 300% center; }
+    }
+
+    /* Typing effect */
+    .hero-typing-wrap {
+      font-family: var(--font-head);
+      font-size: clamp(16px, 2vw, 22px);
+      font-weight: 600;
+      color: var(--c-text2);
+      margin-bottom: 20px;
+      min-height: 32px;
+      opacity: 0;
+      animation: heroFade 0.7s var(--ease-out) 0.45s forwards;
+    }
+    .hero-typing-wrap .typed { color: var(--c-accent2); }
+    .hero-typing-wrap .cursor-type {
+      display: inline-block;
+      width: 2px; height: 1.1em;
+      background: var(--c-accent);
+      vertical-align: text-bottom;
+      margin-left: 2px;
+      animation: blink 0.9s step-end infinite;
+    }
+
+    .hero-summary {
+      font-size: 15px;
+      color: var(--c-text2);
+      line-height: 1.85;
+      max-width: 560px;
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: heroFade 0.7s var(--ease-out) 0.55s forwards;
+    }
+    .hero-summary .mark {
+      color: var(--c-text);
+      font-weight: 500;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+      opacity: 0;
+      animation: heroFade 0.7s var(--ease-out) 0.65s forwards;
+    }
+
+    /* Stats cards */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--c-border);
+      border: 1px solid var(--c-border2);
+      border-radius: 14px;
+      overflow: hidden;
+      max-width: 640px;
+      opacity: 0;
+      animation: heroFade 0.8s var(--ease-out) 0.75s forwards;
+    }
+    .stat-card {
+      background: var(--c-surface);
+      padding: 18px 20px;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .stat-card:hover { background: var(--c-surface2); }
+    .stat-val {
+      font-family: var(--font-head);
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 5px;
+      color: var(--c-accent);
+    }
+    .stat-val.amber { color: var(--c-accent2); }
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--c-text3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      line-height: 1.4;
+    }
+
+    /* ─────────────────────────────────────────
+       SEÇÃO SOBRE
+    ───────────────────────────────────────── */
+    #sobre {
+      padding: 96px var(--section-px);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 56px;
+      align-items: start;
+      max-width: 960px;
+    }
+    .sobre-text {
+      font-size: 15px;
+      color: var(--c-text2);
+      line-height: 1.9;
+    }
+    .sobre-text p + p { margin-top: 14px; }
+    .sobre-text strong { color: var(--c-text); font-weight: 500; }
+    .code-tag {
+      display: inline;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--c-accent);
+      background: rgba(0,212,200,0.07);
+      border: 1px solid rgba(0,212,200,0.14);
+      padding: 1px 7px;
+      border-radius: 4px;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 20px;
+    }
+    .chip {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--c-text2);
+      background: var(--c-surface2);
+      border: 1px solid var(--c-border);
+      padding: 4px 11px;
+      border-radius: 5px;
+      transition: all 0.18s var(--ease-out);
+    }
+    .chip:hover { color: var(--c-accent); border-color: rgba(0,212,200,0.28); transform: translateY(-1px); }
+    .chip.hi { color: var(--c-accent); border-color: rgba(0,212,200,0.22); background: rgba(0,212,200,0.05); }
+
+    /* Card de informações */
+    .info-card {
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.22s;
+    }
+    .info-card:hover { border-color: var(--c-border2); }
+    .info-card-head {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--c-border);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--c-accent);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .info-card-head::before { content: ''; width: 14px; height: 1px; background: var(--c-accent); }
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 20px;
+      border-bottom: 1px solid var(--c-border);
+      transition: background 0.15s;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-row:hover { background: var(--c-surface2); }
+    .info-icon { font-size: 15px; width: 22px; text-align: center; flex-shrink: 0; }
+    .info-lbl  { font-size: 10px; color: var(--c-text3); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1px; }
+    .info-val  { font-size: 13px; color: var(--c-text); font-weight: 500; }
+
+    /* ─────────────────────────────────────────
+       SEÇÃO CONQUISTAS
+    ───────────────────────────────────────── */
+    #conquistas {
+      padding: 96px var(--section-px);
+      background: var(--c-surface);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .ach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      max-width: 880px;
+    }
+    .ach-card {
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: 16px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.3s var(--ease-out), box-shadow 0.3s;
+    }
+    .ach-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease-out);
+    }
+    .ach-card.cyan::before  { background: linear-gradient(90deg, var(--c-accent), transparent); }
+    .ach-card.amber::before { background: linear-gradient(90deg, var(--c-accent2), transparent); }
+    .ach-card:hover { border-color: var(--c-border2); transform: translateY(-4px); box-shadow: 0 20px 48px rgba(0,0,0,0.3); }
+    .ach-card:hover::before { transform: scaleX(1); }
+    /* Número grande de fundo */
+    .ach-bg-num {
+      position: absolute;
+      right: -10px; bottom: -20px;
+      font-family: var(--font-head);
+      font-size: 100px;
+      font-weight: 800;
+      opacity: 0.04;
+      line-height: 1;
+      color: var(--c-text);
+      pointer-events: none;
+      user-select: none;
+    }
+    .ach-num {
+      font-family: var(--font-head);
+      font-size: 54px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .ach-card.cyan  .ach-num { color: var(--c-accent); }
+    .ach-card.amber .ach-num { color: var(--c-accent2); }
+    .ach-title { font-family: var(--font-head); font-size: 15px; font-weight: 700; color: var(--c-text); margin-bottom: 7px; }
+    .ach-desc  { font-size: 13.5px; color: var(--c-text2); line-height: 1.65; }
+
+    /* ─────────────────────────────────────────
+       SEÇÃO EXPERIÊNCIA
+    ───────────────────────────────────────── */
+    #experiencia {
+      padding: 96px var(--section-px);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .timeline {
+      max-width: 860px;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 18px; top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg,
+        var(--c-accent) 0%,
+        rgba(0,212,200,0.3) 30%,
+        var(--c-border) 70%,
+        transparent 100%
+      );
+    }
+    .tl-item {
+      display: flex;
+      gap: 32px;
+      padding-bottom: 50px;
+      position: relative;
+    }
+    .tl-item:last-child { padding-bottom: 0; }
+    /* Ponto da timeline */
+    .tl-dot {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--c-surface);
+      border: 2px solid var(--c-border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      margin-top: 2px;
+      transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+    }
+    .tl-dot-inner {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--c-text3);
+      transition: background 0.25s, transform 0.25s var(--ease-spring);
+    }
+    .tl-item:first-child .tl-dot {
+      border-color: var(--c-accent);
+      background: rgba(0,212,200,0.09);
+      box-shadow: 0 0 0 5px rgba(0,212,200,0.07);
+    }
+    .tl-item:first-child .tl-dot-inner { background: var(--c-accent); transform: scale(1.2); }
+    .tl-item:hover .tl-dot { border-color: var(--c-border2); }
+    .tl-item:hover .tl-dot-inner { transform: scale(1.3); }
+
+    .tl-body { flex: 1; }
+    .tl-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 2px;
+    }
+    .tl-position { font-family: var(--font-head); font-size: 18px; font-weight: 700; color: var(--c-text); letter-spacing: -0.01em; }
+    .tl-date {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--c-text3);
+      background: var(--c-surface2);
+      border: 1px solid var(--c-border);
+      padding: 3px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .tl-company { font-family: var(--font-mono); font-size: 12px; color: var(--c-accent); font-weight: 500; margin-bottom: 3px; }
+    .tl-location {
+      font-size: 12px;
+      color: var(--c-text3);
+      margin-bottom: 14px;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .tl-bullets { display: flex; flex-direction: column; gap: 7px; }
+    .tl-bullet {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--c-text2);
+      line-height: 1.65;
+      transition: color 0.15s;
+    }
+    .tl-bullet:hover { color: var(--c-text); }
+    .tl-bullet::before {
+      content: '▸';
+      color: var(--c-accent);
+      font-size: 10px;
+      flex-shrink: 0;
+      margin-top: 4px;
+      opacity: 0.6;
+    }
+
+    /* ─────────────────────────────────────────
+       SEÇÃO STACK
+    ───────────────────────────────────────── */
+    #stack {
+      padding: 96px var(--section-px);
+      background: var(--c-surface);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      max-width: 880px;
+    }
+    .stack-card {
+      background: var(--c-bg);
+      border: 1px solid var(--c-border);
+      border-radius: 12px;
+      padding: 22px;
+      transition: border-color 0.2s, transform 0.25s var(--ease-out), box-shadow 0.25s;
+    }
+    .stack-card:hover {
+      border-color: rgba(0,212,200,0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    }
+    .stack-card-title {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--c-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 14px;
+      opacity: 0.75;
+    }
+    .stack-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .stack-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 5px;
+      border: 1px solid var(--c-border);
+      color: var(--c-text3);
+      background: var(--c-surface2);
+      transition: all 0.15s;
+    }
+    .stack-tag.hi { color: var(--c-text); border-color: var(--c-border2); }
+    .stack-tag:hover { color: var(--c-accent); border-color: rgba(0,212,200,0.28); }
+
+    /* ─────────────────────────────────────────
+       SEÇÃO CONTATO
+    ───────────────────────────────────────── */
+    #contato {
+      padding: 96px var(--section-px) 120px;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      max-width: 860px;
+      align-items: start;
+    }
+    .contact-lead {
+      font-size: 15px;
+      color: var(--c-text2);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+    .contact-links { display: flex; flex-direction: column; gap: 10px; }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px 18px;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      border-radius: 12px;
+      transition: all 0.22s var(--ease-out);
+    }
+    .contact-link:hover {
+      border-color: rgba(0,212,200,0.3);
+      background: rgba(0,212,200,0.04);
+      transform: translateX(6px);
+    }
+    .contact-link-icon {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: rgba(0,212,200,0.08);
+      border: 1px solid rgba(0,212,200,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0;
+    }
+    .contact-link-lbl { font-size: 10px; color: var(--c-text3); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 2px; }
+    .contact-link-val { font-size: 13.5px; font-weight: 600; color: var(--c-text); }
+    .contact-link svg { width: 14px; height: 14px; fill: none; stroke: var(--c-accent); stroke-width: 2; margin-left: auto; opacity: 0; transition: opacity 0.2s; flex-shrink: 0; }
+    .contact-link:hover svg { opacity: 1; }
+
+    /* ─────────────────────────────────────────
+       RODAPÉ
+    ───────────────────────────────────────── */
+    .footer {
+      padding: 24px var(--section-px);
+      border-top: 1px solid var(--c-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-txt { font-family: var(--font-mono); font-size: 11px; color: var(--c-text3); }
+    .footer-txt span { color: var(--c-accent); }
+
+    /* ─────────────────────────────────────────
+       RESPONSIVO
+    ───────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      :root { --sidebar-w: 0px; --section-px: 32px; }
+      .sidebar { display: none; }
+      .main  { margin-left: 0; }
+      .sobre-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 640px) {
+      :root { --section-px: 20px; }
+      #hero { padding-top: 60px; padding-bottom: 40px; align-items: flex-start; }
+      .ach-grid { grid-template-columns: 1fr; }
+      .stack-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       CURSOR CUSTOMIZADO
+  ══════════════════════════════════════ -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ═══════════════════════════════════════
+       PRELOADER
+  ══════════════════════════════════════ -->
+  <div id="preloader">
+    <div class="pre-name">João Vitor <span>Apollo</span></div>
+    <div class="pre-bar"><div class="pre-fill"></div></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       ORBS DE FUNDO
+  ══════════════════════════════════════ -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       APP PRINCIPAL
+  ══════════════════════════════════════ -->
+  <div id="app">
+
+    <!-- ────────── SIDEBAR ────────── -->
+    <aside class="sidebar" id="sidebar" aria-label="Navegação">
+      <div class="sidebar-logo">
+        <span>// dev.portfolio</span>
+        <span class="logo-blink" aria-hidden="true"></span>
+      </div>
+
+      <div class="sidebar-avatar" aria-hidden="true">JA</div>
+      <div class="sidebar-name">João Vitor Apollo</div>
+      <div class="sidebar-role">Backend Developer<br>PHP · Laravel · MySQL</div>
+
+      <!-- Toggle de idioma -->
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <button class="lang-btn active" data-lang="pt" aria-pressed="true">PT-BR</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- Navegação -->
+      <nav class="nav" aria-label="Seções">
+        <a class="nav-link active" href="#hero"       data-section="hero">
+          <span class="nav-pip" aria-hidden="true"></span>
+          <span class="nav-label" data-key="nav-home">Início</span>
+          <span class="nav-num">01</span>
+        </a>
+        <a class="nav-link" href="#sobre" data-section="sobre">
+          <span class="nav-pip" aria-hidden="true"></span>
+          <span class="nav-label" data-key="nav-about">Sobre</span>
+          <span class="nav-num">02</span>
+        </a>
+        <a class="nav-link" href="#conquistas" data-section="conquistas">
+          <span class="nav-pip" aria-hidden="true"></span>
+          <span class="nav-label" data-key="nav-achievements">Conquistas</span>
+          <span class="nav-num">03</span>
+        </a>
+        <a class="nav-link" href="#experiencia" data-section="experiencia">
+          <span class="nav-pip" aria-hidden="true"></span>
+          <span class="nav-label" data-key="nav-experience">Experiência</span>
+          <span class="nav-num">04</span>
+        </a>
+        <a class="nav-link" href="#stack" data-section="stack">
+          <span class="nav-pip" aria-hidden="true"></span>
+          <span class="nav-label" data-key="nav-stack">Stack</span>
+          <span class="nav-num">05</span>
+        </a>
+        <a class="nav-link" href="#contato" data-section="contato">
+          <span class="nav-pip" aria-hidden="true"></span>
+          <span class="nav-label" data-key="nav-contact">Contato</span>
+          <span class="nav-num">06</span>
+        </a>
+      </nav>
+
+      <!-- Links sociais -->
+      <div class="sidebar-socials">
+        <a class="social-btn" href="mailto:apollojoaov@gmail.com" title="Email" aria-label="Enviar email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a class="social-btn" href="https://linkedin.com/in/joao-apollo" target="_blank" rel="noopener" title="LinkedIn" aria-label="Perfil LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="social-btn" href="https://github.com/ApolloJoaoV" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </div>
+    </aside><!-- /sidebar -->
+
+    <!-- ────────── MAIN ────────── -->
+    <main class="main">
+
+      <!-- ═══════ HERO ═══════ -->
+      <section id="hero" aria-labelledby="hero-heading">
+        <div class="hero-inner">
+
+          <!-- Badge disponível -->
+          <div class="avail-badge hero-tag" id="avail-badge">
+            <span class="avail-dot" aria-hidden="true"></span>
+            <span data-key="available">Disponível para novas oportunidades</span>
+          </div>
+
+          <!-- Nome principal -->
+          <h1 class="hero-name" id="hero-heading">
+            João Vitor<br>
+            <span class="grad">Apollo</span>
+          </h1>
+
+          <!-- Typing effect -->
+          <div class="hero-typing-wrap" aria-live="polite">
+            <span id="typed-text" class="typed"></span><span class="cursor-type" aria-hidden="true"></span>
+          </div>
+
+          <!-- Resumo -->
+          <p class="hero-summary">
+            <span data-key="hero-summary">Desenvolvedor Backend Pleno com <span class="mark">5 anos</span> em PHP e Laravel — do código à estabilidade em produção. Especializado em sistemas de alta demanda, otimização de performance e integração de APIs REST seguindo</span> <code class="code-tag">Clean Code</code> &amp; <code class="code-tag">SOLID</code>.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-ctas">
+            <a href="#experiencia" class="btn btn-accent">
+              <span data-key="btn-exp">Ver experiência</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+            <a href="mailto:apollojoaov@gmail.com" class="btn btn-ghost">
+              <span data-key="btn-contact">Entrar em contato</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="hero-stats" role="list">
+            <div class="stat-card" role="listitem">
+              <div class="stat-val" data-count="5" data-suffix="+">0</div>
+              <div class="stat-label"><span data-key="stat-1">Anos de\nexperiência</span></div>
+            </div>
+            <div class="stat-card" role="listitem">
+              <div class="stat-val" data-count="30" data-prefix="+" data-suffix="%">0</div>
+              <div class="stat-label"><span data-key="stat-2">Ganho de\nperformance</span></div>
+            </div>
+            <div class="stat-card" role="listitem">
+              <div class="stat-val amber" data-count="30" data-suffix="k">0</div>
+              <div class="stat-label"><span data-key="stat-3">Contratos/\nmês</span></div>
+            </div>
+            <div class="stat-card" role="listitem">
+              <div class="stat-val amber" data-count="40" data-prefix="−" data-suffix="%">0</div>
+              <div class="stat-label"><span data-key="stat-4">Manutenção\nreduzida</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- /hero -->
+
+      <!-- ═══════ SOBRE ═══════ -->
+      <section id="sobre" aria-labelledby="sobre-heading">
+        <div class="section-tag anim"><span data-key="section-about">Sobre</span></div>
+        <h2 class="section-title anim anim-d1" id="sobre-heading"><span data-key="about-heading">Quem sou eu</span></h2>
+
+        <div class="sobre-grid">
+          <div>
+            <div class="sobre-text anim anim-d2">
+              <p>
+                <span data-key="about-p1">Desenvolvedor Backend Pleno com foco em <strong>PHP</strong> e <strong>Laravel</strong>, atuando há 5 anos no ciclo completo de aplicações — da arquitetura ao deploy em produção.</span>
+              </p>
+              <p>
+                <span data-key="about-p2">Experiência comprovada em sistemas de <strong>alta demanda</strong>, como plataformas que processam +30.000 contratos/mês, e desenvolvimento de integrações com APIs externas nos setores financeiro, imobiliário e fiscal.</span>
+              </p>
+              <p>
+                <span data-key="about-p3">Adoto</span> <code class="code-tag">Clean Code</code> <span data-key="about-p3b">e</span> <code class="code-tag">SOLID</code> <span data-key="about-p3c">como filosofia de trabalho, garantindo código manutenível e escalável a longo prazo. Experiência com liderança técnica de equipes ágeis via Scrum.</span>
+              </p>
+            </div>
+            <div class="chips anim anim-d3">
+              <span class="chip hi">PHP</span>
+              <span class="chip hi">Laravel</span>
+              <span class="chip hi">MySQL</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Git</span>
+              <span class="chip">Clean Code</span>
+              <span class="chip">CodeIgniter</span>
+              <span class="chip">Vue.js</span>
+            </div>
+          </div>
+
+          <div class="info-card anim anim-d3 from-right">
+            <div class="info-card-head"><span data-key="contact-info">Informações</span></div>
+            <div class="info-row">
+              <span class="info-icon">📍</span>
+              <div>
+                <div class="info-lbl"><span data-key="info-location">Localização</span></div>
+                <div class="info-val">Novo Hamburgo, RS — Brasil</div>
               </div>
             </div>
-          </aside>
-
-          <div class="art-content">
-            <div class="art-curtain" aria-hidden="true"></div>
-
-            <div class="art-top-bg" style="background-image: url(img/bg.jpg)">
-              <div class="art-top-bg-overlay" aria-hidden="true"></div>
-            </div>
-
-            <main id="swup" class="transition-fade" role="main">
-              <div
-                id="scrollbar2"
-                class="art-scroll-frame"
-                role="region"
-                aria-label="Conteúdo principal"
-              >
-                <section class="container-fluid">
-                  <div class="row p-60-0 p-lg-30-0 p-md-15-0">
-                    <div class="col-lg-12">
-                      <div
-                        class="art-a art-banner"
-                        style="background-image: url(img/bg.jpg)"
-                      >
-                        <div class="art-banner-back" aria-hidden="true"></div>
-                        <div class="art-banner-dec" aria-hidden="true"></div>
-                        <div class="art-banner-overlay">
-                          <div class="art-banner-title">
-                            <h1 class="mb-15">Bem-vindo ao meu portfólio</h1>
-                            <div class="art-lg-text art-code mb-25">
-                              &lt;<i>code</i>&gt; Eu construo
-                              <span
-                                class="txt-rotate"
-                                data-period="2000"
-                                data-rotate='["E-commerces","Sistemas de Gestão","Landing Pages","Aplicativos Mobile"]'
-                              ></span>
-                              &lt;/<i>code</i>&gt;
-                            </div>
-                          </div>
-                          <!-- <img
-                            src="img/no-bg.png"
-                            class="art-banner-photo"
-                            alt="João Apollo em destaque"
-                          /> -->
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-
-                <section class="container-fluid" aria-label="Métricas">
-                  <div class="row p-30-0">
-                    <div class="col-md-4 col-6">
-                      <div class="art-counter-frame">
-                        <div class="art-counter-box">
-                          <span class="art-counter">5</span
-                          ><span class="art-counter-plus">+</span>
-                        </div>
-                        <h6>Anos de experiência</h6>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-6">
-                      <div class="art-counter-frame">
-                        <div class="art-counter-box">
-                          <span class="art-counter">70</span>
-                        </div>
-                        <h6>Projetos completos</h6>
-                      </div>
-                    </div>
-                    <div class="col-md-4 col-6">
-                      <div class="art-counter-frame">
-                        <div class="art-counter-box">
-                          <span class="art-counter">38</span
-                          ><span class="art-counter-plus">+</span>
-                        </div>
-                        <h6>Clientes satisfeitos</h6>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-
-                <section class="container-fluid" aria-label="Experiências">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="art-section-title">
-                        <div class="art-title-frame">
-                          <h2>Minhas Experiências</h2>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                      <article class="art-a art-service-icon-box">
-                        <div class="art-service-ib-content">
-                          <h3 class="mb-15">
-                            Head Developer — TGR Studio Digital
-                          </h3>
-                          <p class="mb-15">
-                            Desenvolvimento em PHP/Laravel de sistemas de
-                            gestão, e-commerce e sites. Reuniões de requisitos,
-                            definição de arquitetura, foco em performance e
-                            segurança, gestão de equipe e prazos.
-                          </p>
-                          <div class="art-buttons-frame">
-                            <a
-                              href="https://www.linkedin.com/in/jo%C3%A3o-apollo"
-                              class="art-link art-color-link art-w-chevron" target="_blank"
-                              >Saiba mais</a
-                            >
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                      <article class="art-a art-service-icon-box">
-                        <div class="art-service-ib-content">
-                          <h3 class="mb-15">Desenvolvedor Pleno — USYS</h3>
-                          <p class="mb-15">
-                            Plataforma de fiança locatícia adquirida pelo
-                            QuintoAndar. Solução robusta e segura para processos
-                            de locação com ganho de eficiência.
-                          </p>
-                          <div class="art-buttons-frame">
-                            <a
-                              href="/https://www.linkedin.com/in/jo%C3%A3o-apollo"
-                              class="art-link art-color-link art-w-chevron" target="_blank"
-                              >Saiba mais</a
-                            >
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                      <article class="art-a art-service-icon-box">
-                        <div class="art-service-ib-content">
-                          <h3 class="mb-15">Full Stack — RSA Soluções em TI</h3>
-                          <p class="mb-15">
-                            Dev PHP com CodeIgniter em sistemas personalizados.
-                            Entregas com foco em performance, segurança e
-                            requisitos do cliente.
-                          </p>
-                          <div class="art-buttons-frame">
-                            <a
-                              href="https://www.linkedin.com/in/jo%C3%A3o-apollo"
-                              class="art-link art-color-link art-w-chevron" target="_blank"
-                              >Saiba mais</a 
-                            >
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                      <article class="art-a art-service-icon-box">
-                        <div class="art-service-ib-content">
-                          <h3 class="mb-15">Full Stack — Krafti Tecnologia</h3>
-                          <p class="mb-15">
-                            Manutenção e otimização de marketplace B2B,
-                            melhorias estratégicas para eficiência operacional e
-                            UX.
-                          </p>
-                          <div class="art-buttons-frame">
-                            <a
-                              href="https://www.linkedin.com/in/jo%C3%A3o-apollo"
-                              class="art-link art-color-link art-w-chevron" target="_blank"
-                              >Saiba mais</a
-                            >
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </div>
-                </section>
-
-                <!-- <section class="container-fluid" aria-label="Recomendações">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="art-section-title">
-                        <div class="art-title-frame">
-                          <h2>Recomendações</h2>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                      <div
-                        class="swiper-container art-testimonial-slider"
-                        style="overflow: visible"
-                      >
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <blockquote
-                              class="art-a art-testimonial"
-                              itemscope
-                              itemtype="https://schema.org/Review"
-                            >
-                              <div class="testimonial-body">
-                                <img
-                                  class="art-testimonial-face"
-                                  src="img/testimonials/face-1.jpg"
-                                  alt="Foto de Paul Trueman"
-                                />
-                                <h3 itemprop="author">Paul Trueman</h3>
-                                <p class="art-el-suptitle mb-15">
-                                  Template author
-                                </p>
-                                <p class="mb-15" itemprop="reviewBody">
-                                  Working with Artur has been a pleasure... This
-                                  is easily a 5 star freelancer.
-                                </p>
-                              </div>
-                              <div class="art-testimonial-footer">
-                                <div class="art-left-side">
-                                  <ul
-                                    class="art-star-rate"
-                                    aria-label="Avaliação: 5 de 5"
-                                  >
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                  </ul>
-                                </div>
-                                <div class="art-right-side"></div>
-                              </div>
-                            </blockquote>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <blockquote class="art-a art-testimonial">
-                              <div class="testimonial-body">
-                                <img
-                                  class="art-testimonial-face"
-                                  src="img/testimonials/face-2.jpg"
-                                  alt="Foto de Paul Trueman"
-                                />
-                                <h3>Paul Trueman</h3>
-                                <p class="art-el-suptitle mb-15">
-                                  Template author
-                                </p>
-                                <p class="mb-15">
-                                  Working with Artur has been a pleasure...
-                                </p>
-                              </div>
-                              <div class="art-testimonial-footer">
-                                <div class="art-left-side">
-                                  <ul
-                                    class="art-star-rate"
-                                    aria-label="Avaliação: 4 de 5"
-                                  >
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li class="art-empty-item">
-                                      <i class="fas fa-star"></i>
-                                    </li>
-                                  </ul>
-                                </div>
-                                <div class="art-right-side"></div>
-                              </div>
-                            </blockquote>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <blockquote class="art-a art-testimonial">
-                              <div class="testimonial-body">
-                                <img
-                                  class="art-testimonial-face"
-                                  src="img/testimonials/face-3.jpg"
-                                  alt="Foto de Paul Trueman"
-                                />
-                                <h3>Paul Trueman</h3>
-                                <p class="art-el-suptitle mb-15">
-                                  Template author
-                                </p>
-                                <p class="mb-15">
-                                  Working with Artur has been a pleasure...
-                                </p>
-                              </div>
-                              <div class="art-testimonial-footer">
-                                <div class="art-left-side">
-                                  <ul
-                                    class="art-star-rate"
-                                    aria-label="Avaliação: 5 de 5"
-                                  >
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                  </ul>
-                                </div>
-                                <div class="art-right-side"></div>
-                              </div>
-                            </blockquote>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <blockquote class="art-a art-testimonial">
-                              <div class="testimonial-body">
-                                <img
-                                  class="art-testimonial-face"
-                                  src="img/testimonials/face-4.jpg"
-                                  alt="Foto de Paul Trueman"
-                                />
-                                <h3>Paul Trueman</h3>
-                                <p class="art-el-suptitle mb-15">
-                                  Template author
-                                </p>
-                                <p class="mb-15">
-                                  Working with Artur has been a pleasure...
-                                </p>
-                              </div>
-                              <div class="art-testimonial-footer">
-                                <div class="art-left-side">
-                                  <ul
-                                    class="art-star-rate"
-                                    aria-label="Avaliação: 5 de 5"
-                                  >
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                  </ul>
-                                </div>
-                                <div class="art-right-side"></div>
-                              </div>
-                            </blockquote>
-                          </div>
-                        </div>
-
-                        <div class="art-slider-navigation">
-                          <div class="art-sn-left">
-                            <div
-                              class="swiper-pagination"
-                              aria-label="Paginação"
-                            ></div>
-                          </div>
-                          <div class="art-sn-right">
-                            <div class="art-slider-nav-frame">
-                              <button
-                                class="art-slider-nav art-testi-swiper-prev"
-                                aria-label="Anterior"
-                              >
-                                <i class="fas fa-chevron-left"></i>
-                              </button>
-                              <button
-                                class="art-slider-nav art-testi-swiper-next"
-                                aria-label="Próximo"
-                              >
-                                <i class="fas fa-chevron-right"></i>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section> -->
-
-                <section class="container-fluid" aria-label="Contato">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="art-section-title">
-                        <div class="art-title-frame">
-                          <h2>Informações de contato</h2>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="art-a art-card">
-                        <div class="art-table p-15-15">
-                          <ul>
-                            <li>
-                              <h6>Email:</h6>
-                              <span>apollojoaov@gmail.com</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="art-a art-card">
-                        <div class="art-table p-15-15">
-                          <ul>
-                            <li>
-                              <h6>Celular:</h6>
-                              <span>+55 (51) 99588-1825</span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-
-                <section class="container-fluid">
-                  <footer>
-                    <p>© 2025 João Apollo</p>
-                  </footer>
-                </section>
+            <div class="info-row">
+              <span class="info-icon">✉️</span>
+              <div>
+                <div class="info-lbl">Email</div>
+                <div class="info-val">apollojoaov@gmail.com</div>
               </div>
-            </main>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">🔗</span>
+              <div>
+                <div class="info-lbl">LinkedIn</div>
+                <div class="info-val">linkedin.com/in/joao-apollo</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <span class="info-icon">🐙</span>
+              <div>
+                <div class="info-lbl">GitHub</div>
+                <div class="info-val">github.com/ApolloJoaoV</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section><!-- /sobre -->
 
-      <div class="art-preloader" aria-hidden="true">
-        <div class="art-preloader-content">
-          <h4>João Apollo</h4>
-          <div id="preloader" class="art-preloader-load"></div>
+      <!-- ═══════ CONQUISTAS ═══════ -->
+      <section id="conquistas" aria-labelledby="conquistas-heading">
+        <div class="section-tag anim"><span data-key="section-ach">Conquistas</span></div>
+        <h2 class="section-title anim anim-d1" id="conquistas-heading"><span data-key="ach-heading">Resultados mensuráveis</span></h2>
+
+        <div class="ach-grid">
+          <!-- Card 1 -->
+          <div class="ach-card cyan anim scale-in anim-d1">
+            <div class="ach-bg-num">+30</div>
+            <div class="ach-num">+30%</div>
+            <div class="ach-title"><span data-key="ach-1-title">Eficiência do sistema</span></div>
+            <div class="ach-desc"><span data-key="ach-1-desc">Otimizações de código e melhoria das consultas em sistemas de alta demanda, elevando a performance em 30%.</span></div>
+          </div>
+          <!-- Card 2 -->
+          <div class="ach-card cyan anim scale-in anim-d2">
+            <div class="ach-bg-num">4s</div>
+            <div class="ach-num">14s→4s</div>
+            <div class="ach-title"><span data-key="ach-2-title">Queries SQL otimizadas</span></div>
+            <div class="ach-desc"><span data-key="ach-2-desc">Reduzi o tempo de resposta de consultas críticas de 14 segundos para 4 via otimização do banco MySQL.</span></div>
+          </div>
+          <!-- Card 3 -->
+          <div class="ach-card amber anim scale-in anim-d3">
+            <div class="ach-bg-num">30k</div>
+            <div class="ach-num">30k</div>
+            <div class="ach-title"><span data-key="ach-3-title">Contratos/mês processados</span></div>
+            <div class="ach-desc"><span data-key="ach-3-desc">Processamento de +30.000 contratos mensais via desenvolvimento eficaz de funcionalidades na plataforma PHP.</span></div>
+          </div>
+          <!-- Card 4 -->
+          <div class="ach-card amber anim scale-in anim-d4">
+            <div class="ach-bg-num">40</div>
+            <div class="ach-num">−40%</div>
+            <div class="ach-title"><span data-key="ach-4-title">Manutenção reduzida</span></div>
+            <div class="ach-desc"><span data-key="ach-4-desc">Princípios SOLID e Clean Code reduziram o tempo de manutenção em 40% em projetos legados.</span></div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section><!-- /conquistas -->
 
-    <script src="js/plugins/jquery.min.js"></script>
-    <script src="js/plugins/anime.min.js"></script>
-    <script src="js/plugins/swiper.min.js"></script>
-    <script src="js/plugins/progressbar.min.js"></script>
-    <script src="js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="js/plugins/overscroll.min.js"></script>
-    <script src="js/plugins/typing.min.js"></script>
-    <script src="js/plugins/isotope.min.js"></script>
-    <script src="js/plugins/fancybox.min.js"></script>
-    <!-- <script src="js/plugins/swup.min.js"></script> -->
-    <script src="js/main.js"></script>
-  </body>
+      <!-- ═══════ EXPERIÊNCIA ═══════ -->
+      <section id="experiencia" aria-labelledby="exp-heading">
+        <div class="section-tag anim"><span data-key="section-exp">Experiência</span></div>
+        <h2 class="section-title anim anim-d1" id="exp-heading"><span data-key="exp-heading">Trajetória profissional</span></h2>
+
+        <div class="timeline">
+          <!-- ── TGR Digital Catalysts ── -->
+          <article class="tl-item anim anim-d2">
+            <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <div class="tl-position"><span data-key="exp-1-pos">Desenvolvedor Pleno</span></div>
+                <div class="tl-date">Jan 2023 – Mar 2023</div>
+              </div>
+              <div class="tl-company">TGR Digital Catalysts</div>
+              <div class="tl-location">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span data-key="exp-1-loc">Novo Hamburgo, Brasil</span>
+              </div>
+              <ul class="tl-bullets">
+                <li class="tl-bullet"><span data-key="exp-1-b1">Implementei novas funcionalidades em Laravel seguindo SOLID e Clean Code, reduzindo manutenção em 40%</span></li>
+                <li class="tl-bullet"><span data-key="exp-1-b2">Integrei APIs de terceiros: nota fiscal, gateway de pagamento, simuladores bancários</span></li>
+                <li class="tl-bullet"><span data-key="exp-1-b3">Otimizei consultas SQL em MySQL — queries críticas de 14s para 4s</span></li>
+                <li class="tl-bullet"><span data-key="exp-1-b4">Liderança técnica da equipe com gestão ágil via Scrum</span></li>
+                <li class="tl-bullet"><span data-key="exp-1-b5">Deploy com Envoyer, patches de segurança e resolução de bugs críticos em produção</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── Usys Tec ── -->
+          <article class="tl-item anim anim-d3">
+            <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <div class="tl-position"><span data-key="exp-2-pos">Desenvolvedor Pleno</span></div>
+                <div class="tl-date">Mai 2022 – Fev 2023</div>
+              </div>
+              <div class="tl-company">Usys Tec</div>
+              <div class="tl-location">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span data-key="exp-2-loc">Blumenau, Brasil</span>
+              </div>
+              <ul class="tl-bullets">
+                <li class="tl-bullet"><span data-key="exp-2-b1">Desenvolvi funcionalidades em plataforma de fiança locatícia em PHP + Vue.js, processando +30k contratos/mês</span></li>
+                <li class="tl-bullet"><span data-key="exp-2-b2">Mantive estabilidade em produção até a aquisição da plataforma pelo QuintoAndar</span></li>
+                <li class="tl-bullet"><span data-key="exp-2-b3">Implementei integrações com APIs externas dos setores imobiliário e financeiro</span></li>
+                <li class="tl-bullet"><span data-key="exp-2-b4">Responsabilidade direta sobre dados sensíveis de usuários com boas práticas de segurança</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── Seven App ── -->
+          <article class="tl-item anim anim-d4">
+            <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <div class="tl-position"><span data-key="exp-3-pos">Desenvolvedor Junior</span></div>
+                <div class="tl-date">Jan 2021 – Mai 2022</div>
+              </div>
+              <div class="tl-company">Seven App</div>
+              <div class="tl-location">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span data-key="exp-3-loc">Novo Hamburgo, Brasil</span>
+              </div>
+              <ul class="tl-bullets">
+                <li class="tl-bullet"><span data-key="exp-3-b1">Desenvolvi sistemas em PHP com CodeIgniter para ERP, e-commerce, sistemas financeiros e portais</span></li>
+                <li class="tl-bullet"><span data-key="exp-3-b2">Contato direto com clientes para levantamento de requisitos e entrega de soluções</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ── Krafti ── -->
+          <article class="tl-item anim anim-d5">
+            <div class="tl-dot" aria-hidden="true"><div class="tl-dot-inner"></div></div>
+            <div class="tl-body">
+              <div class="tl-head">
+                <div class="tl-position"><span data-key="exp-4-pos">Estágio — Full Stack</span></div>
+                <div class="tl-date">Jan 2020 – Mai 2020</div>
+              </div>
+              <div class="tl-company">Krafti Tecnologia</div>
+              <div class="tl-location">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span data-key="exp-4-loc">Dois Irmãos, Brasil</span>
+              </div>
+              <ul class="tl-bullets">
+                <li class="tl-bullet"><span data-key="exp-4-b1">Manutenção e otimização contínua de marketplace B2B com foco em eficiência operacional</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section><!-- /experiencia -->
+
+      <!-- ═══════ STACK ═══════ -->
+      <section id="stack" aria-labelledby="stack-heading">
+        <div class="section-tag anim"><span data-key="section-stack">Stack</span></div>
+        <h2 class="section-title anim anim-d1" id="stack-heading"><span data-key="stack-heading">Tecnologias &amp; ferramentas</span></h2>
+
+        <div class="stack-grid">
+          <div class="stack-card anim scale-in anim-d1">
+            <div class="stack-card-title"><span data-key="stack-1">Backend Core</span></div>
+            <div class="stack-tags">
+              <span class="stack-tag hi">PHP</span>
+              <span class="stack-tag hi">Laravel</span>
+              <span class="stack-tag hi">MySQL</span>
+              <span class="stack-tag hi">REST APIs</span>
+            </div>
+          </div>
+          <div class="stack-card anim scale-in anim-d2">
+            <div class="stack-card-title"><span data-key="stack-2">Frontend &amp; Integração</span></div>
+            <div class="stack-tags">
+              <span class="stack-tag hi">Vue.js</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">CodeIgniter</span>
+              <span class="stack-tag">HTML/CSS</span>
+            </div>
+          </div>
+          <div class="stack-card anim scale-in anim-d3">
+            <div class="stack-card-title"><span data-key="stack-3">DevOps &amp; Ferramentas</span></div>
+            <div class="stack-tags">
+              <span class="stack-tag hi">Envoyer</span>
+              <span class="stack-tag hi">Git</span>
+              <span class="stack-tag">Scrum</span>
+              <span class="stack-tag">Linux</span>
+            </div>
+          </div>
+          <div class="stack-card anim scale-in anim-d2">
+            <div class="stack-card-title"><span data-key="stack-4">Princípios</span></div>
+            <div class="stack-tags">
+              <span class="stack-tag hi">Clean Code</span>
+              <span class="stack-tag hi">SOLID</span>
+              <span class="stack-tag">DDD</span>
+              <span class="stack-tag">TDD</span>
+            </div>
+          </div>
+          <div class="stack-card anim scale-in anim-d3">
+            <div class="stack-card-title"><span data-key="stack-5">Banco de Dados</span></div>
+            <div class="stack-tags">
+              <span class="stack-tag hi">MySQL</span>
+              <span class="stack-tag hi">Query Opt.</span>
+              <span class="stack-tag">Migrations</span>
+              <span class="stack-tag">Eloquent</span>
+            </div>
+          </div>
+          <div class="stack-card anim scale-in anim-d4">
+            <div class="stack-card-title"><span data-key="stack-6">Idiomas</span></div>
+            <div class="stack-tags">
+              <span class="stack-tag hi">Português — Nativo</span>
+              <span class="stack-tag">English — Interm.</span>
+              <span class="stack-tag">Español — Interm.</span>
+            </div>
+          </div>
+        </div>
+      </section><!-- /stack -->
+
+      <!-- ═══════ CONTATO ═══════ -->
+      <section id="contato" aria-labelledby="contato-heading">
+        <div class="section-tag anim"><span data-key="section-contact">Contato</span></div>
+        <h2 class="section-title anim anim-d1" id="contato-heading"><span data-key="contact-heading">Vamos trabalhar juntos?</span></h2>
+
+        <div class="contact-grid">
+          <div class="anim anim-d2">
+            <div class="avail-badge" style="margin-bottom: 20px; display: inline-flex;">
+              <span class="avail-dot" aria-hidden="true"></span>
+              <span data-key="available">Disponível para novas oportunidades</span>
+            </div>
+            <p class="contact-lead">
+              <span data-key="contact-lead">Estou aberto a novas oportunidades, projetos freelance ou parcerias técnicas. Sinta-se à vontade para entrar em contato!</span>
+            </p>
+          </div>
+
+          <div class="contact-links anim anim-d3">
+            <a class="contact-link" href="mailto:apollojoaov@gmail.com">
+              <div class="contact-link-icon">✉️</div>
+              <div>
+                <div class="contact-link-lbl">Email</div>
+                <div class="contact-link-val">apollojoaov@gmail.com</div>
+              </div>
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+            <a class="contact-link" href="https://linkedin.com/in/joao-apollo" target="_blank" rel="noopener">
+              <div class="contact-link-icon">🔗</div>
+              <div>
+                <div class="contact-link-lbl">LinkedIn</div>
+                <div class="contact-link-val">linkedin.com/in/joao-apollo</div>
+              </div>
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+            <a class="contact-link" href="https://github.com/ApolloJoaoV" target="_blank" rel="noopener">
+              <div class="contact-link-icon">🐙</div>
+              <div>
+                <div class="contact-link-lbl">GitHub</div>
+                <div class="contact-link-val">github.com/ApolloJoaoV</div>
+              </div>
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+      </section><!-- /contato -->
+
+      <!-- ═══════ RODAPÉ ═══════ -->
+      <footer class="footer">
+        <div class="footer-txt">
+          © 2026 <span>João Vitor Apollo Bamberg</span> — Backend Developer
+        </div>
+        <!-- <div class="footer-txt">
+          <span title="Entre em contato">💜</span>
+        </div> -->
+      </footer>
+
+    </main><!-- /main -->
+  </div><!-- /app -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       JAVASCRIPT
+       ─────────────────────────────────────────────────────────
+       Organizado em módulos lógicos com comentários.
+       Para manutenção: cada seção é independente.
+  ════════════════════════════════════════════════════════════ -->
+  <script>
+  /* ───────────────────────────────────────────────────────────
+     TRADUÇÕES
+     Para adicionar idioma: copie um objeto, preencha os textos
+     e adicione o botão de idioma no HTML.
+  ─────────────────────────────────────────────────────────── */
+  const TRANSLATIONS = {
+    pt: {
+      'available':        'Disponível para novas oportunidades',
+      'nav-home':         'Início',
+      'nav-about':        'Sobre',
+      'nav-achievements': 'Conquistas',
+      'nav-experience':   'Experiência',
+      'nav-stack':        'Stack',
+      'nav-contact':      'Contato',
+      'btn-exp':          'Ver experiência',
+      'btn-contact':      'Entrar em contato',
+      'hero-summary':     'Desenvolvedor Backend Pleno com <span class="mark">5 anos</span> em PHP e Laravel — do código à estabilidade em produção. Especializado em sistemas de alta demanda, otimização de performance e integração de APIs REST seguindo',
+      'stat-1':           'Anos de\nexperiência',
+      'stat-2':           'Ganho de\nperformance',
+      'stat-3':           'Contratos/\nmês',
+      'stat-4':           'Manutenção\nreduzida',
+      'section-about':    'Sobre',
+      'about-heading':    'Quem sou eu',
+      'about-p1':         'Desenvolvedor Backend Pleno com foco em <strong>PHP</strong> e <strong>Laravel</strong>, atuando há 5 anos no ciclo completo de aplicações — da arquitetura ao deploy em produção.',
+      'about-p2':         'Experiência comprovada em sistemas de <strong>alta demanda</strong>, como plataformas que processam +30.000 contratos/mês, e desenvolvimento de integrações com APIs externas nos setores financeiro, imobiliário e fiscal.',
+      'about-p3':         'Adoto', 'about-p3b': 'e', 'about-p3c': 'como filosofia de trabalho, garantindo código manutenível e escalável a longo prazo. Experiência com liderança técnica de equipes ágeis via Scrum.',
+      'contact-info':     'Informações',
+      'info-location':    'Localização',
+      'section-ach':      'Conquistas',
+      'ach-heading':      'Resultados mensuráveis',
+      'ach-1-title':      'Eficiência do sistema',
+      'ach-1-desc':       'Otimizações de código e melhoria das consultas em sistemas de alta demanda, elevando a performance em 30%.',
+      'ach-2-title':      'Queries SQL otimizadas',
+      'ach-2-desc':       'Reduzi o tempo de resposta de consultas críticas de 14 segundos para 4 via otimização do banco MySQL.',
+      'ach-3-title':      'Contratos/mês processados',
+      'ach-3-desc':       'Processamento de +30.000 contratos mensais via desenvolvimento eficaz de funcionalidades na plataforma PHP.',
+      'ach-4-title':      'Manutenção reduzida',
+      'ach-4-desc':       'Princípios SOLID e Clean Code reduziram o tempo de manutenção em 40% em projetos legados.',
+      'section-exp':      'Experiência',
+      'exp-heading':      'Trajetória profissional',
+      'exp-1-pos': 'Desenvolvedor Pleno', 'exp-1-loc': 'Novo Hamburgo, Brasil',
+      'exp-1-b1': 'Implementei novas funcionalidades em Laravel seguindo SOLID e Clean Code, reduzindo manutenção em 40%',
+      'exp-1-b2': 'Integrei APIs de terceiros: nota fiscal, gateway de pagamento, simuladores bancários',
+      'exp-1-b3': 'Otimizei consultas SQL em MySQL — queries críticas de 14s para 4s',
+      'exp-1-b4': 'Liderança técnica da equipe com gestão ágil via Scrum',
+      'exp-1-b5': 'Deploy com Envoyer, patches de segurança e resolução de bugs críticos em produção',
+      'exp-2-pos': 'Desenvolvedor Pleno', 'exp-2-loc': 'Blumenau, Brasil',
+      'exp-2-b1': 'Desenvolvi funcionalidades em plataforma de fiança locatícia em PHP + Vue.js, processando +30k contratos/mês',
+      'exp-2-b2': 'Mantive estabilidade em produção até a aquisição da plataforma pelo QuintoAndar',
+      'exp-2-b3': 'Implementei integrações com APIs externas dos setores imobiliário e financeiro',
+      'exp-2-b4': 'Responsabilidade direta sobre dados sensíveis de usuários com boas práticas de segurança',
+      'exp-3-pos': 'Desenvolvedor Junior', 'exp-3-loc': 'Novo Hamburgo, Brasil',
+      'exp-3-b1': 'Desenvolvi sistemas em PHP com CodeIgniter para ERP, e-commerce, sistemas financeiros e portais',
+      'exp-3-b2': 'Contato direto com clientes para levantamento de requisitos e entrega de soluções',
+      'exp-4-pos': 'Estágio — Full Stack', 'exp-4-loc': 'Dois Irmãos, Brasil',
+      'exp-4-b1': 'Manutenção e otimização contínua de marketplace B2B com foco em eficiência operacional',
+      'section-stack':    'Stack',
+      'stack-heading':    'Tecnologias & ferramentas',
+      'stack-1': 'Backend Core', 'stack-2': 'Frontend & Integração', 'stack-3': 'DevOps & Ferramentas',
+      'stack-4': 'Princípios',   'stack-5': 'Banco de Dados',         'stack-6': 'Idiomas',
+      'section-contact':  'Contato',
+      'contact-heading':  'Vamos trabalhar juntos?',
+      'contact-lead':     'Estou aberto a novas oportunidades, projetos freelance ou parcerias técnicas. Sinta-se à vontade para entrar em contato!',
+      'footer-built':     'Construído com',
+    },
+    en: {
+      'available':        'Open to new opportunities',
+      'nav-home':         'Home',
+      'nav-about':        'About',
+      'nav-achievements': 'Achievements',
+      'nav-experience':   'Experience',
+      'nav-stack':        'Stack',
+      'nav-contact':      'Contact',
+      'btn-exp':          'View experience',
+      'btn-contact':      'Get in touch',
+      'hero-summary':     'Senior Backend Developer with <span class="mark">5 years</span> in PHP & Laravel — from code to production stability. Specialized in high-demand systems, performance optimization, and REST API integration following',
+      'stat-1':           'Years of\nexperience',
+      'stat-2':           'Performance\ngain',
+      'stat-3':           'Contracts/\nmonth',
+      'stat-4':           'Maintenance\nreduced',
+      'section-about':    'About',
+      'about-heading':    'Who I am',
+      'about-p1':         'Senior Backend Developer focused on <strong>PHP</strong> and <strong>Laravel</strong>, with 5 years in the full application lifecycle — from architecture to production deployment.',
+      'about-p2':         'Proven experience with <strong>high-demand systems</strong>, including platforms that process 30k+ contracts/month, and external API integrations in financial and real estate sectors.',
+      'about-p3':         'I adopt', 'about-p3b': 'and', 'about-p3c': 'as my development philosophy, ensuring maintainable and scalable code over the long term. Experience in technical team leadership with agile management via Scrum.',
+      'contact-info':     'Information',
+      'info-location':    'Location',
+      'section-ach':      'Achievements',
+      'ach-heading':      'Measurable results',
+      'ach-1-title':      'System efficiency',
+      'ach-1-desc':       'Code optimizations and query improvements in high-demand systems, boosting performance by 30%.',
+      'ach-2-title':      'Optimized SQL queries',
+      'ach-2-desc':       'Reduced critical query response time from 14 seconds to 4 via MySQL database optimization.',
+      'ach-3-title':      'Contracts/month processed',
+      'ach-3-desc':       'Processing of 30,000+ monthly contracts via effective PHP feature development.',
+      'ach-4-title':      'Reduced maintenance',
+      'ach-4-desc':       'SOLID and Clean Code principles cut maintenance time by 40% on legacy projects.',
+      'section-exp':      'Experience',
+      'exp-heading':      'Professional journey',
+      'exp-1-pos': 'Mid-Level Developer', 'exp-1-loc': 'Novo Hamburgo, Brazil',
+      'exp-1-b1': 'Implemented new Laravel features following SOLID and Clean Code, reducing maintenance by 40%',
+      'exp-1-b2': 'Integrated third-party APIs: invoicing, payment gateway, banking simulators',
+      'exp-1-b3': 'Optimized MySQL queries — critical queries reduced from 14s to 4s',
+      'exp-1-b4': 'Technical team leadership with agile management via Scrum',
+      'exp-1-b5': 'Deploy pipeline with Envoyer, security patches and critical bug fixes in production',
+      'exp-2-pos': 'Mid-Level Developer', 'exp-2-loc': 'Blumenau, Brazil',
+      'exp-2-b1': 'Developed features on a rental guarantee platform (PHP + Vue.js), processing 30k+ contracts/month',
+      'exp-2-b2': 'Maintained production stability through acquisition by QuintoAndar',
+      'exp-2-b3': 'Implemented integrations with external APIs in real estate and financial sectors',
+      'exp-2-b4': 'Direct responsibility over sensitive user data with security best practices',
+      'exp-3-pos': 'Junior Developer', 'exp-3-loc': 'Novo Hamburgo, Brazil',
+      'exp-3-b1': 'Built custom systems in PHP/CodeIgniter for ERP, e-commerce, financial systems and portals',
+      'exp-3-b2': 'Direct client contact for requirements gathering and delivery of business-aligned solutions',
+      'exp-4-pos': 'Internship — Full Stack', 'exp-4-loc': 'Dois Irmãos, Brazil',
+      'exp-4-b1': 'Maintenance and optimization of a B2B marketplace focused on operational efficiency',
+      'section-stack':    'Stack',
+      'stack-heading':    'Technologies & tools',
+      'stack-1': 'Backend Core', 'stack-2': 'Frontend & Integration', 'stack-3': 'DevOps & Tools',
+      'stack-4': 'Principles',   'stack-5': 'Databases',               'stack-6': 'Languages',
+      'section-contact':  'Contact',
+      'contact-heading':  "Let's work together?",
+      'contact-lead':     "I'm open to new opportunities, freelance projects, or technical partnerships. Feel free to reach out!",
+      'footer-built':     'Built with',
+    }
+  };
+
+  /* Frases do typing no hero — edite para mudar os textos */
+  const TYPING_PHRASES = {
+    pt: ['Backend Developer', 'PHP & Laravel', 'NodeJS', 'API Integration', 'Clean Code'],
+    en: ['Backend Developer', 'PHP & Laravel', 'NodeJS', 'API Integration', 'Clean Code'],
+  };
+
+  /* ───────────────────────────────────────────────────────────
+     ESTADO GLOBAL
+  ─────────────────────────────────────────────────────────── */
+  let currentLang = 'pt';
+
+  /* ───────────────────────────────────────────────────────────
+     PRELOADER
+     Esconde após 1.1s (tempo da animação da barra)
+  ─────────────────────────────────────────────────────────── */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('preloader').classList.add('hidden');
+    }, 1100);
+  });
+
+  /* ───────────────────────────────────────────────────────────
+     CURSOR CUSTOMIZADO
+     Atualiza posição via mousemove com suavização por rAF
+  ─────────────────────────────────────────────────────────── */
+  (function initCursor() {
+    const dot  = document.getElementById('cursor');
+    const ring = document.getElementById('cursor-ring');
+    let mx = 0, my = 0;     // posição do mouse
+    let rx = 0, ry = 0;     // posição suavizada do ring
+
+    document.addEventListener('mousemove', (e) => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top  = my + 'px';
+    });
+
+    /* Ring segue com inércia */
+    function animateRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    /* Hover em links e botões */
+    document.querySelectorAll('a, button, .chip, .ach-card, .stack-card, .info-row').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+  })();
+
+  /* ───────────────────────────────────────────────────────────
+     TYPING EFFECT NO HERO
+     Escreve e apaga frases em loop
+  ─────────────────────────────────────────────────────────── */
+  (function initTyping() {
+    const el = document.getElementById('typed-text');
+    let phraseIdx = 0;
+    let charIdx   = 0;
+    let deleting  = false;
+    let paused    = false;
+
+    function tick() {
+      const phrases = TYPING_PHRASES[currentLang];
+      const phrase  = phrases[phraseIdx % phrases.length];
+
+      if (paused) { paused = false; setTimeout(tick, deleting ? 60 : 1200); return; }
+
+      if (!deleting) {
+        el.textContent = phrase.slice(0, ++charIdx);
+        if (charIdx === phrase.length) { deleting = true; paused = true; }
+      } else {
+        el.textContent = phrase.slice(0, --charIdx);
+        if (charIdx === 0) { deleting = false; phraseIdx++; paused = true; }
+      }
+      setTimeout(tick, deleting ? 48 : 95);
+    }
+    tick();
+  })();
+
+  /* ───────────────────────────────────────────────────────────
+     ANIMAÇÕES DE SCROLL
+     IntersectionObserver — adiciona classe 'in' quando visível
+  ─────────────────────────────────────────────────────────── */
+  (function initScrollAnimations() {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.anim').forEach(el => io.observe(el));
+  })();
+
+  /* ───────────────────────────────────────────────────────────
+     CONTADOR ANIMADO NOS STATS
+     Anima de 0 até o valor-alvo quando visível
+  ─────────────────────────────────────────────────────────── */
+  (function initCounters() {
+    function animateCounter(el) {
+      const target  = parseInt(el.dataset.count);
+      const prefix  = el.dataset.prefix  || '';
+      const suffix  = el.dataset.suffix  || '';
+      const dur     = 1200;
+      const start   = performance.now();
+
+      function step(now) {
+        const p   = Math.min((now - start) / dur, 1);
+        const val = Math.round(p * p * target); /* ease-in */
+        el.textContent = prefix + val + suffix;
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = prefix + target + suffix;
+      }
+      requestAnimationFrame(step);
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCounter(e.target);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('[data-count]').forEach(el => io.observe(el));
+  })();
+
+  /* ───────────────────────────────────────────────────────────
+     NAVEGAÇÃO ATIVA
+     Atualiza o link ativo da sidebar conforme scroll
+  ─────────────────────────────────────────────────────────── */
+  (function initActiveNav() {
+    const sections = ['hero','sobre','conquistas','experiencia','stack','contato'];
+    const links    = document.querySelectorAll('.nav-link');
+
+    function update() {
+      let active = 'hero';
+      for (const id of sections) {
+        const sec = document.getElementById(id);
+        if (sec && sec.getBoundingClientRect().top <= 160) active = id;
+      }
+      links.forEach(l => l.classList.toggle('active', l.dataset.section === active));
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+
+  /* ───────────────────────────────────────────────────────────
+     SISTEMA MULTILÍNGUE
+     Troca todos os elementos com data-key para o idioma selecionado
+  ─────────────────────────────────────────────────────────── */
+  (function initLang() {
+    function applyLang(lang) {
+      const t = TRANSLATIONS[lang];
+      if (!t) return;
+      currentLang = lang;
+
+      /* Atualiza elementos com data-key */
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.dataset.key;
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+
+      /* Atualiza atributo lang do html */
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+
+      /* Atualiza botões */
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const isActive = btn.dataset.lang === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      /* Re-roda animações de scroll para novos elementos */
+      document.querySelectorAll('.anim:not(.in)').forEach(el => {
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        io.observe(el);
+      });
+    }
+
+    /* Event listeners nos botões de idioma */
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+    });
+
+    /* Aplica idioma inicial */
+    applyLang('pt');
+  })();
+  </script>
+</body>
 </html>
